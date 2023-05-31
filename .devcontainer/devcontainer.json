@@ -22,5 +22,5 @@
     },
     "ghcr.io/devcontainers-contrib/features/direnv-asdf:2": {}
   },
-  "postCreateCommand": ".devcontainer/post-create.sh",
+  "postCreateCommand": "asdf direnv setup --shell bash --version latest"
 }
