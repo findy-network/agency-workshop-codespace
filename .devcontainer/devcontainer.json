@@ -1,7 +1,7 @@
 {
   "name": "Findy Agency workshop environment",
   "image": "ghcr.io/findy-network/agency-workshop-codespace:0.1.0",
-  "workspaceFolder": "/workspaces/agency-workshop-codespace/agency-workshop",
+  "workspaceFolder": "/workshop",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/guiyomh/features/golangci-lint:0": {
@@ -22,5 +22,5 @@
       ]
     }
   },
-  "postCreateCommand": "asdf direnv setup --shell bash --version latest"
+  "postCreateCommand": "./post-create.sh"
 }

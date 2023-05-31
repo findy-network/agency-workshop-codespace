@@ -21,6 +21,6 @@ RUN ARCH=$(dpkg --print-architecture) && \
   curl https://raw.githubusercontent.com/findy-network/findy-agent-cli/HEAD/install.sh >install.sh && \
   chmod a+x install.sh && \
   sudo ./install.sh -b /bin && \
-  rm ./install.sh && \
-  #### clone workshop codes ####
-  git clone https://github.com/findy-network/agency-workshop.git
+  rm ./install.sh
+
+WORKDIR /workshop
