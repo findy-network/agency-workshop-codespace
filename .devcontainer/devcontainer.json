@@ -1,6 +1,7 @@
 {
   "name": "Findy Agency workshop environment",
   "image": "ghcr.io/findy-network/agency-workshop-codespace:0.1.0",
+  "workspaceFolder": "/workspaces/agency-workshop-codespace/agency-workshop",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/guiyomh/features/golangci-lint:0": {

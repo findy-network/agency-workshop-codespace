@@ -24,5 +24,3 @@ RUN ARCH=$(dpkg --print-architecture) && \
   rm ./install.sh && \
   #### clone workshop codes ####
   git clone https://github.com/findy-network/agency-workshop.git
-
-WORKDIR /workspaces/agency-workshop-codespace/agency-workshop
