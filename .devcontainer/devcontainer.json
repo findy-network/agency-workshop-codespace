@@ -1,15 +1,6 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "golang.go",
-        "mathiasfrohlich.Kotlin"
-      ]
-    }
-  },
+  "name": "Findy Agency workshop environment",
+  "image": "ghcr.io/findy-network/agency-workshop-codespace:0.1.0",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/guiyomh/features/golangci-lint:0": {
@@ -21,6 +12,14 @@
       "installGradle": "true"
     },
     "ghcr.io/devcontainers-contrib/features/direnv-asdf:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "mathiasfrohlich.Kotlin"
+      ]
+    }
   },
   "postCreateCommand": "asdf direnv setup --shell bash --version latest"
 }
