@@ -1,17 +1,8 @@
 {
   "name": "Findy Agency workshop environment",
   "image": "ghcr.io/findy-network/agency-workshop-codespace:0.1.0",
-  "workspaceFolder": "/workshop",
+  "workspaceFolder": "/home/vscode/workshop",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/guiyomh/features/golangci-lint:0": {
-      "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "none",
-      "installMaven": "false",
-      "installGradle": "true"
-    },
     "ghcr.io/devcontainers-contrib/features/direnv-asdf:2": {}
   },
   "customizations": {
@@ -22,5 +13,5 @@
       ]
     }
   },
-  "postCreateCommand": "./post-create.sh"
+  "postCreateCommand": "asdf direnv setup --shell bash --version latest"
 }

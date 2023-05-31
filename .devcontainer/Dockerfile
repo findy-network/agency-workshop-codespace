@@ -23,4 +23,28 @@ RUN ARCH=$(dpkg --print-architecture) && \
   sudo ./install.sh -b /bin && \
   rm ./install.sh
 
-WORKDIR /workshop
+#### install Gradle ####
+ENV GRADLE_VERSION=8.1.1
+RUN cd /usr/local && \
+  curl -L https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -o gradle-${GRADLE_VERSION}-bin.zip && \
+  unzip gradle-${GRADLE_VERSION}-bin.zip && \
+  rm gradle-${GRADLE_VERSION}-bin.zip
+
+ENV GRADLE_HOME=/usr/local/gradle-${GRADLE_VERSION}
+ENV PATH=$PATH:$GRADLE_HOME/bin
+ENV JAVA_HOME=/usr/lib/jvm/msopenjdk-current
+
+USER vscode
+
+#### install NVM ####
+ENV NVM_DIR=/home/vscode/.nvm
+RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && \
+  . $NVM_DIR/nvm.sh && \
+  #### clone workshop codes and install deps ####
+  git clone https://github.com/findy-network/agency-workshop.git /home/vscode/workshop && \
+  cd /home/vscode/workshop/track2.1-ts/app && nvm install && npm install && \
+  cd /home/vscode/workshop/track2.2-go/app && go mod tidy && \
+  cd /home/vscode/workshop/track2.3-kt/app && gradle build
+
+
+WORKDIR /home/vscode/workshop
