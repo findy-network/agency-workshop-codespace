@@ -21,13 +21,15 @@ Ensure you have the latest codes. Type to terminal:
     git pull
     ```
 
-1. You should cd to your target track app directory. E.g. for TypeScript track:
+1. **[CLI track]** Follow the instructions for [the CLI track](https://github.com/findy-network/agency-workshop/tree/master/track1-cli#0-set-your-findy-network-root-directory).
+
+1. **[Code track]** You should cd to your target track app directory. E.g. for TypeScript track:
 
     ```bash
     cd /workshop/track2.1-ts/app
     ```
 
-1. Follow the instructions for the code tracks from following steps onwards:
+1. **[Code track]** Follow the instructions for the code tracks from following steps onwards:
 
 * [TypeScript Track Step 0.5](https://github.com/findy-network/agency-workshop/blob/master/track2.1-ts/README.md#5-set-environment-variables)
 * [Go Track Step 0.5](https://github.com/findy-network/agency-workshop/blob/master/track2.2-go/README.md#5-set-environment-variables)
